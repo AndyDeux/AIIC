@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div id ="wrapper"> 
+    <h2 id="complete">Image Processing Complete</h1>
+    <img id="processed_image" src="{{url_for('static', filename='normalized/' + filename)}}" alt="Colorized image"/>
+    <form method="post">
+        <div class="action-buttons">
+            <a href="{{url_for('download_file', filename=filename)}}" class="btn btn-secondary " id="download">Download</a>
+            <button type="submit" class="btn btn-primary" id="another">Upload Another Image</button>
+        </div>
+    </form>
+</div> 
+{% endblock %}

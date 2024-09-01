@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div id ="wrapper">
+    <h1 id="title">AI Image Colorizer</h1>
+
+    <form method='POST' enctype="multipart/form-data" action="/home">
+        <div>
+            <div class="container">
+                <input class="form-control form-control-lg" id="formFileLg" type="file" name="file">
+                <button type="submit" class="btn btn-primary" id="submit" value="Upload">Submit</button>
+            </div> 
+        </div>
+    </form>
+</div> 
+{% endblock %}
